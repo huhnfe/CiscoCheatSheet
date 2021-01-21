@@ -3,6 +3,23 @@ Erklärt die Grundlagen und Abläufe der Konfiguration über die Cisco CLI. Manc
 
 Bei Befehlen stehen Wörter in `[]` für optionale Argumente und `<>` für Pflichtargumente. `<IP-Adresse>` steht also für eine IP Adresse die eingetragen werden soll.
 
+- [Cisco CLI Cheatsheet](#cisco-cli-cheatsheet)
+  - [Basics](#basics)
+    - [Modi](#modi)
+    - [Anzeige](#anzeige)
+    - [Konfiguration](#konfiguration)
+      - [Erstellen](#erstellen)
+      - [Löschen](#löschen)
+  - [IP Adresse zuweisen](#ip-adresse-zuweisen)
+    - [Router](#router)
+    - [Switch](#switch)
+  - [VLANS](#vlans)
+    - [VLAN erstellen](#vlan-erstellen)
+    - [VLAN Port zuweisen](#vlan-port-zuweisen)
+    - [Port als Trunk konfigurieren](#port-als-trunk-konfigurieren)
+    - [VLANs zu Trunk hinzufügen/entfernen](#vlans-zu-trunk-hinzufügenentfernen)
+    - [Router-on-a-stick konfigurieren](#router-on-a-stick-konfigurieren)
+
 ## Basics
 
 ### Modi
