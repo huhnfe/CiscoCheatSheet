@@ -19,6 +19,9 @@ Bei Befehlen stehen Wörter in `[]` für optionale Argumente und `<>` für Pflic
     - [Port als Trunk konfigurieren](#port-als-trunk-konfigurieren)
     - [VLANs zu Trunk hinzufügen/entfernen](#vlans-zu-trunk-hinzufügenentfernen)
     - [Router-on-a-stick konfigurieren](#router-on-a-stick-konfigurieren)
+  - [DHCP Server konfigurieren](#dhcp-server-konfigurieren)
+    - [Basic](#basic)
+    - [Anderen DHCP Server verwenden](#anderen-dhcp-server-verwenden)
 
 ## Basics
 
@@ -157,3 +160,26 @@ Folgende Konfiguration muss für jedes VLAN, das auf dem Interface anliegen soll
         Router (config)# interface <interface>.<VLAN-ID>
         Router (config-subif)# encapsulation dot1q <VLAN-ID>
         Router (config-subif)# ip address <IP-Adresse> <Subnetz-Maske>
+
+## DHCP Server konfigurieren
+
+### Basic
+
+Diese Befehlen verwenden um den Router als DHCP Server zu verwenden.
+
+Pool anlegen:
+
+        Router (config)# ip dhcp pool <Poolname>
+        Router (config-dhcp)# network <Netz-ID> <Subnetz-Maske>
+        Router (config-dhcp)# default-router <Default-Gateway IP>
+
+Optional noch DNS Server hinzufügen:
+
+        Router (config-dhcp)# dns-server <DNS-Server IP>
+
+Diese Schritte für jedes Subnetz durchführen
+
+### Anderen DHCP Server verwenden
+
+        Router (config)# interface <Interface-ID>
+        Router (config-if)# ip helper-address <DHCP-Server-IP>
